@@ -1,3 +1,6 @@
+requires n plus 1 cells
+cell 0 will be zero
+
 ++++++++++++++++++++++++++++++++++++++++++ 42 in cell 0
 [
   > go to cell 1
