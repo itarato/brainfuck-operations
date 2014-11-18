@@ -1,5 +1,5 @@
 /*
-	Brainfuck compiler written in GoLang
+	Brainfuck interpreter written in GoLang
 	Version V0.1.0
 */
 
@@ -24,16 +24,16 @@ const (
 
 func main() {
 	if len(os.Args) <= 1 {
-		fmt.Println("brainfuck compiler, try: go run compile.go filename.bf")
+		fmt.Println("brainfuck interpreter, try: go run interpreter.go filename.bf")
 		os.Exit(1)
 	}
 
 	filename := os.Args[1]
 	fileBuff, _ := ioutil.ReadFile(filename)
-	compile(fileBuff)
+	interpret(fileBuff)
 }
 
-func compile(fileBuff []byte) {
+func interpret(fileBuff []byte) {
 	bracketStack := make([]int, 1000)
 	bracketStackPointer := 0
 	memory := make([]int, 1000)
