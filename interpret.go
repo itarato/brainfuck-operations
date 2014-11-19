@@ -70,6 +70,9 @@ func interpret(fileBuff []byte) {
 		case tokenPrev:
 			pointerPos--
 		case tokenIn:
+			var inString string
+			fmt.Scanf("%s", &inString)
+			memory[pointerPos] = int(inString[0])
 		case tokenOut:
 			fmt.Print(string(memory[pointerPos]))
 		case tokenOpen:
